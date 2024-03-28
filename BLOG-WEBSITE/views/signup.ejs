@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Sign up</title>
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %>
+    <div name = "container mt-4 mb-4">
+        <form action ="/user/signup" method = "post">
+          <div class="mb-3">
+
+            <label 
+              for="exampleInputfullname1" 
+              class="form-label">
+              Fullname
+           </label>
+
+            <input 
+              type="text" 
+              class="form-control" 
+              id="exampleInputfullname1" 
+              aria-describedby="fullname"
+              name = "fullname"
+            >
+          </div>          
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input 
+                 type="email" 
+                 class="form-control" 
+                 id="exampleInputEmail1" 
+                 aria-describedby="emailHelp"
+                 name="email"
+              >
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input 
+                  type="password" 
+                  class="form-control" 
+                  id="exampleInputPassword1"
+                  name ="password"
+              >
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+    <%- include('./partials/script.ejs') %>
+</body>
+</html>
